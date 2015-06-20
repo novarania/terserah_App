@@ -1,5 +1,6 @@
 package com.aceculture.terserahapp;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -9,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +20,7 @@ public class MainActivity extends ActionBarActivity {
         ImageButton jadwal_Btn = (ImageButton) findViewById(R.id.jadwal_btn);
         jadwal_Btn.setOnClickListener((View.OnClickListener) this);
         ImageButton buka_Btn = (ImageButton) findViewById(R.id.buka_btn);
-
+        buka_Btn.setOnClickListener((View.OnClickListener) this);
     }
 
     @Override
@@ -44,9 +45,18 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
     public void onClick(View v) {
-        //Log.i("clicks","You Clicked B1");
-        Intent i=new Intent(MainActivity.this,jadwal_imsak_solat.class);
-        startActivity(i);
+        switch (v.getId()) {
+            case R.id.jadwal_btn:
+                //Log.i("clicks","You Clicked B1");
+                Intent i = new Intent(MainActivity.this, jadwal_imsak_solat.class);
+                startActivity(i);
+                break;
+            case R.id.buka_btn:
+                Intent j = new Intent(MainActivity.this, tempat_berbuka.class);
+                startActivity(j);
+                break;
+
+        }
     }
 
 }

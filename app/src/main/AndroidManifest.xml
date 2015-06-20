@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".jadwal_imsak_solat"
+            android:label="@string/title_activity_jadwal_imsak_solat" >
+        </activity>
+        <activity
+            android:name=".tempat_berbuka"
+            android:label="@string/title_activity_tempat_berbuka" >
+        </activity>
     </application>
 
 </manifest>
