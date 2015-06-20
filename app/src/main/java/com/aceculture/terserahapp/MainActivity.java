@@ -1,9 +1,13 @@
 package com.aceculture.terserahapp;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -11,6 +15,11 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ImageButton jadwal_Btn = (ImageButton) findViewById(R.id.jadwal_btn);
+        jadwal_Btn.setOnClickListener((View.OnClickListener) this);
+        ImageButton buka_Btn = (ImageButton) findViewById(R.id.buka_btn);
+
     }
 
     @Override
@@ -34,4 +43,10 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+    public void onClick(View v) {
+        //Log.i("clicks","You Clicked B1");
+        Intent i=new Intent(MainActivity.this,jadwal_imsak_solat.class);
+        startActivity(i);
+    }
+
 }
