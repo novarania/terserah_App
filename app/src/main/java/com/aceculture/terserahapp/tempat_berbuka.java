@@ -32,14 +32,13 @@ public class tempat_berbuka extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tempat_berbuka);
         setupToolbar();
+
+
         listItem = new ListTempatMakanAdapter();
-        list_tempat_makan_dekat.setEmptyView(findViewById(R.id.listTempatMakanDekat));
+
         ListView listItemView = (ListView)findViewById(R.id.listTempatMakanDekat);
         listItemView.setAdapter(listItem);
 
-       /* listViewTempatMakan chapter = listItem.getListViewTempatMakan();
-
-        showDeleteDialog(chapter);*/
 
 
     }
