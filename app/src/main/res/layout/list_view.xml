@@ -21,6 +21,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+<<<<<<< HEAD
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -46,4 +47,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="No Results" />
+=======
+>>>>>>> f00891de19d590bf6fc642cdc9de75597046e4f2
 </RelativeLayout>
