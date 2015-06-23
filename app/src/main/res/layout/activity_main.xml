@@ -16,9 +16,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/jadwal_btn"
         android:src="@drawable/jadwalsolat"
+
         android:layout_above="@+id/buka_btn"
         android:layout_marginTop="40dp"
-        android:layout_centerHorizontal="true" />
+        android:background="@null"
+        android:layout_centerHorizontal="true"
+        android:clickable="false" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -27,6 +30,7 @@
         android:src="@drawable/btn_tempatmakan"
         android:layout_centerVertical="true"
         android:layout_marginTop="20dp"
+        android:background="@null"
         android:layout_alignLeft="@+id/jadwal_btn"
         android:layout_alignStart="@+id/jadwal_btn" />
 
