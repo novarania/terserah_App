@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.aceculture.terserahapp" >
-    <user-permission android:name="android.permission.INTERNET"/>
-    <user-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <user-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <user-permission android:name="android.permission.INTERNET" />
+    <user-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <user-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -13,11 +14,8 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity
             android:name=".jadwal_imsak_solat"
@@ -30,6 +28,17 @@
         <activity
             android:name=".detail_tempat_makan"
             android:label="@string/title_activity_detail_tempat_makan" >
+        </activity>
+        <activity
+            android:name=".splashscreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
