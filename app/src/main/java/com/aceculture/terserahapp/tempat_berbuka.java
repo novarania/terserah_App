@@ -1,7 +1,5 @@
 package com.aceculture.terserahapp;
 
-<<<<<<< HEAD
-=======
 import android.app.Activity;
 import android.content.Context;
 import android.support.v7.app.ActionBar;
