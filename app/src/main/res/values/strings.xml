@@ -3,6 +3,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_jadwal_imsak_solat">jadwal_imsak_solat</string>
-    <string name="title_activity_tempat_berbuka">tempat_berbuka</string>
+    <string name="title_activity_jadwal_imsak_solat">Jadwal Imsak dan Sholat</string>
+    <string name="title_activity_tempat_berbuka">Tempat Berbuka</string>
+    <string name="title_activity_detail_tempat_makan">Tentang Tempat Makan</string>
 </resources>

@@ -2,25 +2,43 @@ package com.aceculture.terserahapp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class MainActivity extends Activity implements View.OnClickListener {
-
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        setupToolbar();
         ImageButton jadwal_Btn = (ImageButton) findViewById(R.id.jadwal_btn);
         jadwal_Btn.setOnClickListener((View.OnClickListener) this);
         ImageButton buka_Btn = (ImageButton) findViewById(R.id.buka_btn);
         buka_Btn.setOnClickListener((View.OnClickListener) this);
+
+
+    }
+
+    private void setupToolbar() {
+        toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        if(toolbar != null)
+            setSupportActionBar(toolbar);
+
+        // Show menu icon
+        final ActionBar ab = getSupportActionBar();
+        ab.setHomeAsUpIndicator(R.drawable.logo_small);
+
+        ab.setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
