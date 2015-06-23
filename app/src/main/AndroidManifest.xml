@@ -24,6 +24,10 @@
             android:name=".tempat_berbuka"
             android:label="@string/title_activity_tempat_berbuka" >
         </activity>
+        <activity
+            android:name=".detail_tempat_makan"
+            android:label="@string/title_activity_detail_tempat_makan" >
+        </activity>
     </application>
 
 </manifest>

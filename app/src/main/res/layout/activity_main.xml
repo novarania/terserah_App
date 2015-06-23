@@ -1,20 +1,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent"
+
     android:background="@drawable/bg_mesjid"
     tools:context=".MainActivity">
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"
+        ></include>
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/buka_btn"
-        android:src="@drawable/btn_tempatmakan"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/jadwal_btn"
-        android:layout_alignStart="@+id/jadwal_btn" />
+
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -22,5 +17,17 @@
         android:id="@+id/jadwal_btn"
         android:src="@drawable/jadwalsolat"
         android:layout_above="@+id/buka_btn"
+        android:layout_marginTop="40dp"
         android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buka_btn"
+        android:src="@drawable/btn_tempatmakan"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:layout_alignLeft="@+id/jadwal_btn"
+        android:layout_alignStart="@+id/jadwal_btn" />
+
 </RelativeLayout>

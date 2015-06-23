@@ -1,40 +1,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent"
+
     tools:context="com.aceculture.terserahapp.jadwal_imsak_solat"
     android:background="@drawable/bg_mesjid2"
     >
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="14dp"
-        android:paddingBottom="14dp"
-        android:layout_below="@+id/text_menu"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:background="#37B559"
-        android:id="@+id/frame_menu"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Jadwal Imsak dan Sholat"
-            android:textStyle="bold"
-            android:id="@+id/text_menu"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_gravity="center_horizontal|top"
-            android:textColor="@android:color/white"
-            android:typeface="sans" />
-    </FrameLayout>
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"
+        ></include>
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -43,19 +17,19 @@
         android:paddingBottom="14dp"
         android:background="#3acb5d"
         android:id="@+id/frame_clock"
-        android:layout_below="@+id/frame_menu"
-        android:layout_marginTop="36dp"
-        android:layout_alignRight="@+id/frame_menu"
-        android:layout_alignEnd="@+id/frame_menu"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_below="@+id/tool_bar"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="52dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_centerHorizontal="true">
 
         <TextClock
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textClock"
             android:textStyle="bold"
-            android:paddingLeft="15dp"
+            android:layout_marginLeft="40dp"
             android:layout_gravity="center_horizontal|top"
             android:textColor="#ffffff"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -68,9 +42,18 @@
             android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:paddingLeft="85dp"
+            android:layout_marginLeft="80dp"
             android:src="@drawable/icon_jam"
-            android:layout_gravity="left|top" />
+            android:layout_gravity="center_vertical"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Now"
+            android:layout_marginLeft="105dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/now"
+            android:textColor="#ffffff"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
     </FrameLayout>
 
@@ -81,21 +64,12 @@
         android:paddingBottom="14dp"
         android:background="#3acb5d"
         android:id="@+id/frame_countdown_sholat"
-        android:layout_marginTop="10dp"
         android:layout_below="@+id/frame_clock"
-        android:layout_alignLeft="@+id/frame_clock"
-        android:layout_alignStart="@+id/frame_clock"
-        android:layout_alignRight="@+id/frame_clock"
-        android:layout_alignEnd="@+id/frame_clock">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="(misal: 02.20 menuju Sholat...)"
-            android:paddingLeft="10dp"
-            android:id="@+id/text_countdown"
-            android:layout_gravity="center_horizontal|top"
-            android:textColor="#ffffff" />
+        android:layout_marginTop="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -104,23 +78,80 @@
             android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:paddingLeft="45dp"
+
             android:src="@drawable/countdown"
-            android:layout_gravity="left|center_vertical" />
+            android:layout_gravity="center_horizontal|center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/textjam"
+            android:layout_gravity="center_vertical"
+            android:textColor="#ffffff"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jam"
+            android:layout_marginLeft="50dp"
+            android:layout_gravity="center_vertical"
+            android:textColor="#ffffff"
+            android:id="@+id/jam"/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:layout_marginLeft="90dp"
+            android:id="@+id/textmenit"
+            android:layout_gravity="center_vertical"
+            android:textColor="#ffffff"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menit"
+            android:layout_marginLeft="110dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/menit"
+            android:textColor="#ffffff" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waktu"
+            android:layout_marginLeft="200dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/waktu_menuju"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Asar"
+            android:layout_marginLeft="250dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/Sholat"
+            android:textColor="#ffffff"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
     </FrameLayout>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="99dp"
         android:layout_height="100dp"
-        android:layout_below="@+id/frame_countdown_sholat"
-        android:layout_alignLeft="@+id/frame_countdown_sholat"
-        android:layout_alignStart="@+id/frame_countdown_sholat"
-        android:layout_toLeftOf="@+id/frame"
 
-        android:layout_marginTop="40dp"
         android:id="@+id/linearLayout_imsak"
-        android:background="#3acb5d">
+        android:layout_below="@+id/frame_countdown_sholat"
+        android:layout_marginTop="50dp"
+        android:background="#3acb5d"
+        android:layout_marginLeft="20dp"
+        >
 
         <TextView
             android:layout_width="wrap_content"
@@ -139,7 +170,7 @@
 
             android:layout_gravity="center_horizontal"
             android:paddingTop="20dp"
-            android:id="@+id/waktu_imsak"
+            android:id="@+id/waktuImsak"
             android:textColor="#ffffff"
             android:textAppearance="?android:attr/textAppearanceLarge" />
     </LinearLayout>
@@ -148,11 +179,10 @@
         android:orientation="vertical"
         android:layout_width="99dp"
         android:layout_height="100dp"
-        android:layout_alignTop="@+id/linearLayout_imsak"
-        android:layout_centerHorizontal="true"
         android:id="@+id/linearLayout_subuh"
-        android:layout_centerVertical="true"
-        android:background="#3acb5d" >
+        android:background="#3acb5d"
+        android:layout_alignTop="@+id/linearLayout_imsak"
+        android:layout_centerHorizontal="true">
 
         <TextView
             android:layout_width="wrap_content"
@@ -169,7 +199,7 @@
             android:layout_height="wrap_content"
             android:text="4:25 AM"
             android:paddingTop="20dp"
-            android:id="@+id/waktu_subuh"
+            android:id="@+id/waktuSubuh"
             android:layout_gravity="center_horizontal"
             android:textColor="#ffffff"
             android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -179,11 +209,11 @@
         android:orientation="vertical"
         android:layout_width="99dp"
         android:layout_height="100dp"
-        android:layout_alignTop="@+id/linearLayout_subuh"
-        android:layout_alignRight="@+id/frame_countdown_sholat"
-        android:layout_alignEnd="@+id/frame_countdown_sholat"
         android:id="@+id/linearLayout_zuhur"
-        android:background="#3acb5d" >
+        android:background="#3acb5d"
+        android:layout_marginLeft="20dp"
+        android:layout_alignTop="@+id/linearLayout_subuh"
+        android:layout_alignEnd="@+id/frame_countdown_sholat">
 
         <TextView
             android:layout_width="wrap_content"
@@ -201,7 +231,7 @@
             android:text="12:00 PM"
             android:layout_gravity="center_horizontal"
             android:paddingTop="20dp"
-            android:id="@+id/waktu_dzuhur"
+            android:id="@+id/waktuDzuhur"
             android:textColor="#ffffff"
             android:textAppearance="?android:attr/textAppearanceLarge" />
     </LinearLayout>
@@ -212,8 +242,9 @@
         android:layout_height="100dp"
         android:id="@+id/linearLayout_asar"
         android:background="#3acb5d"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout_imsak"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="20dp"
         android:layout_alignParentStart="true">
 
         <TextView
@@ -232,38 +263,7 @@
             android:text="15:05 PM"
             android:layout_gravity="center_horizontal"
             android:paddingTop="20dp"
-            android:id="@+id/waktu_asar"
-            android:textColor="#ffffff"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="99dp"
-        android:layout_height="100dp"
-        android:id="@+id/linearLayout_isya"
-        android:layout_alignTop="@+id/linearLayout_maghrib"
-        android:layout_alignLeft="@+id/linearLayout_zuhur"
-        android:layout_alignStart="@+id/linearLayout_zuhur"
-        android:background="#3acb5d" >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Isya"
-            android:layout_gravity="center_horizontal"
-            android:textStyle="bold"
-            android:paddingTop="17dp"
-            android:id="@+id/text_isya"
-            android:textColor="#ffffff" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="18:00 PM"
-            android:layout_gravity="center_horizontal"
-            android:paddingTop="20dp"
-            android:id="@+id/waktu_isya"
+            android:id="@+id/waktuAsar"
             android:textColor="#ffffff"
             android:textAppearance="?android:attr/textAppearanceLarge" />
     </LinearLayout>
@@ -275,7 +275,6 @@
         android:id="@+id/linearLayout_maghrib"
         android:background="#3acb5d"
         android:layout_alignTop="@+id/linearLayout_asar"
-        android:layout_alignLeft="@+id/linearLayout_subuh"
         android:layout_alignStart="@+id/linearLayout_subuh">
 
         <TextView
@@ -294,7 +293,37 @@
             android:text="17:35 PM"
             android:layout_gravity="center_horizontal"
             android:paddingTop="20dp"
-            android:id="@+id/waktu_maghrib"
+            android:id="@+id/waktuMaghrib"
+            android:textColor="#ffffff"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="99dp"
+        android:layout_height="100dp"
+        android:id="@+id/linearLayout_isya"
+        android:background="#3acb5d"
+        android:layout_alignTop="@+id/linearLayout_maghrib"
+        android:layout_alignStart="@+id/linearLayout_zuhur">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Isya"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:paddingTop="17dp"
+            android:id="@+id/text_isya"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18:00 PM"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="20dp"
+            android:id="@+id/waktuIsya"
             android:textColor="#ffffff"
             android:textAppearance="?android:attr/textAppearanceLarge" />
     </LinearLayout>
