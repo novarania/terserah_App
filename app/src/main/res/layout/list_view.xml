@@ -41,4 +41,9 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="false"
         android:textColor="#ffffff" />
+
+    <TextView android:id="@android:id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="No Results" />
 </RelativeLayout>
