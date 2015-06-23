@@ -6,7 +6,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
->>>>>>> f00891de19d590bf6fc642cdc9de75597046e4f2
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
