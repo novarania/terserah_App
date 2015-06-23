@@ -8,6 +8,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
 
 public class detail_tempat_makan extends AppCompatActivity {
     Toolbar toolbar;
@@ -15,8 +18,12 @@ public class detail_tempat_makan extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_tempat_makan);
+
         setupToolbar();
     }
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

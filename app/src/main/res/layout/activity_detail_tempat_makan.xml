@@ -9,4 +9,167 @@
         layout="@layout/tool_bar"
         ></include>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="value_nama_tempat_makan"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+
+        android:id="@+id/namaTempatMakan"
+        android:layout_below="@+id/tool_bar"
+
+        android:textColor="#37b559" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jarak:"
+        android:id="@+id/jarakText"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_below="@+id/namaTempatMakan"
+        android:layout_alignParentStart="true"
+        android:textColor="#ffffff" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="value_jarak"
+        android:id="@+id/jarakTempatMakan"
+        android:layout_marginLeft="5dp"
+        android:textColor="#ffffff"
+        android:layout_alignTop="@+id/jarakText"
+        android:layout_toEndOf="@+id/jarakText" />
+
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/jarakTempatMakan"
+        android:layout_marginTop="25dp"
+        android:id="@+id/scrollView"
+         >
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Alamat"
+            android:id="@+id/textAlamat"
+            android:layout_marginLeft="25dp"
+
+
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="value_alamat"
+
+            android:id="@+id/alamatTempatMakan"
+            android:layout_below="@+id/textAlamat"
+            android:layout_alignStart="@+id/textAlamat"
+            android:textColor="#3edf61" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Nomor Telepon"
+            android:id="@+id/TextNoTelp"
+            android:layout_below="@+id/alamatTempatMakan"
+            android:layout_alignStart="@+id/alamatTempatMakan"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="value_no_telp"
+            android:id="@+id/NoTelp"
+            android:textColor="#3edf61"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/TextNoTelp"
+            android:layout_alignStart="@+id/TextNoTelp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Website"
+            android:id="@+id/TextWebsite"
+            android:layout_below="@+id/NoTelp"
+            android:layout_alignStart="@+id/NoTelp"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="value_website"
+            android:id="@+id/website"
+            android:textColor="#3edf61"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/TextWebsite"
+            android:layout_alignStart="@+id/TextWebsite" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Buka?"
+            android:id="@+id/TextBuka"
+            android:layout_below="@+id/website"
+            android:layout_alignStart="@+id/website"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="value_status_buka"
+            android:id="@+id/statusBuka"
+            android:textColor="#3edf61"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/TextBuka"
+            android:layout_alignStart="@+id/TextBuka" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Rating"
+            android:id="@+id/TextRating"
+            android:layout_below="@+id/statusBuka"
+            android:layout_alignStart="@+id/statusBuka"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="value_rating"
+            android:id="@+id/rating"
+            android:textColor="#3edf61"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/TextRating"
+            android:layout_alignStart="@+id/TextRating" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_call"
+                android:layout_alignTop="@+id/TextNoTelp"
+                android:layout_toRightOf="@+id/TextNoTelp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="155dp"
+                android:background="@null"
+                android:src="@drawable/call" />
+        </RelativeLayout>
+    </ScrollView>
+
+
 </RelativeLayout>
+
