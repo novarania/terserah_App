@@ -73,7 +73,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent j = new Intent(MainActivity.this, tempat_berbuka.class);
                 startActivity(j);
                 break;
-
         }
     }
 

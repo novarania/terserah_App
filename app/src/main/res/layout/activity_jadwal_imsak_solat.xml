@@ -24,17 +24,6 @@
         android:layout_marginRight="20dp"
         android:layout_centerHorizontal="true">
 
-        <TextClock
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/textClock"
-            android:textStyle="bold"
-            android:layout_marginLeft="40dp"
-            android:layout_gravity="center_horizontal|top"
-            android:textColor="#ffffff"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textIsSelectable="false" />
-
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,6 +43,16 @@
             android:id="@+id/now"
             android:textColor="#ffffff"
             android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <DigitalClock
+            android:id="@+id/digitalClock1"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="DigitalClock"
+            android:layout_marginLeft="165dp"
+            android:textColor="#ffffff"
+            android:layout_gravity="center_vertical"
+            android:textSize="18sp"/>
 
     </FrameLayout>
 
