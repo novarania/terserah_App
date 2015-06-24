@@ -2,6 +2,8 @@ package com.aceculture.terserahapp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.location.LocationManager;
+import android.provider.Settings;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -21,10 +23,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         setupToolbar();
-        ImageButton jadwal_Btn = (ImageButton) findViewById(R.id.jadwal_btn);
+        final ImageButton jadwal_Btn = (ImageButton) findViewById(R.id.jadwal_btn);
         jadwal_Btn.setOnClickListener((View.OnClickListener) this);
+
         ImageButton buka_Btn = (ImageButton) findViewById(R.id.buka_btn);
         buka_Btn.setOnClickListener((View.OnClickListener) this);
+
+
 
 
     }
@@ -62,10 +67,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         return super.onOptionsItemSelected(item);
     }
+
+
     public void onClick(View v) {
+
         switch (v.getId()) {
+
             case R.id.jadwal_btn:
-                //Log.i("clicks","You Clicked B1");
+
+
                 Intent i = new Intent(MainActivity.this, jadwal_imsak_solat.class);
                 startActivity(i);
                 break;

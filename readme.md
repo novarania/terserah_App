@@ -13,3 +13,4 @@ Hamdan Prakoso <br />
 Raditya Chandra Buana <br />
 
 web service: http://praytime.info/getprayertimes.php?lat=-7.7828&lon=110.360802&gmt=420&m=5&y=2015&school=0
+API key : AIzaSyD4d1gsumRgRnZGLgz547wWAY3kSaEauh0
