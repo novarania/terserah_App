@@ -52,7 +52,8 @@
             android:layout_marginLeft="165dp"
             android:textColor="#ffffff"
             android:layout_gravity="center_vertical"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
     </FrameLayout>
 
@@ -84,12 +85,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="26dp"
             android:id="@+id/textjam"
             android:layout_gravity="center_vertical"
             android:textColor="#ffffff"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="2" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -105,12 +106,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+<<<<<<< HEAD
             android:text="2"
+=======
+>>>>>>> d3bb754d4a634d12673f85419d20d81b737c8c01
             android:layout_marginLeft="85dp"
             android:id="@+id/textmenit"
             android:layout_gravity="center_vertical"
             android:textColor="#ffffff"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="2" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -165,7 +170,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="4:10 AM"
 
             android:layout_gravity="center_horizontal"
             android:paddingTop="20dp"
@@ -196,7 +200,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="4:25 AM"
             android:paddingTop="20dp"
             android:id="@+id/waktuSubuh"
             android:layout_gravity="center_horizontal"
@@ -227,7 +230,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="12:00 PM"
             android:layout_gravity="center_horizontal"
             android:paddingTop="20dp"
             android:id="@+id/waktuDzuhur"
@@ -259,7 +261,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="15:05 PM"
             android:layout_gravity="center_horizontal"
             android:paddingTop="20dp"
             android:id="@+id/waktuAsar"
@@ -289,7 +290,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="17:35 PM"
             android:layout_gravity="center_horizontal"
             android:paddingTop="20dp"
             android:id="@+id/waktuMaghrib"
@@ -319,7 +319,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="18:00 PM"
             android:layout_gravity="center_horizontal"
             android:paddingTop="20dp"
             android:id="@+id/waktuIsya"
