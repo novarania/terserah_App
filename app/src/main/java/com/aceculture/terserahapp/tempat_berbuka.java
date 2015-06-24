@@ -39,11 +39,8 @@ public class tempat_berbuka extends AppCompatActivity {
 
         ListView listItemView = (ListView)findViewById(R.id.listTempatMakanDekat);
         listItemView.setAdapter(listItem);
-
-
-
     }
-    public class listViewTempatMakan
+    public static class listViewTempatMakan
     {
         String namaTempatMakan;
         String alamatTempatMakan;
@@ -90,11 +87,12 @@ public class tempat_berbuka extends AppCompatActivity {
         }
     }
 
+    public static listViewTempatMakan item = new listViewTempatMakan();
     public static List<listViewTempatMakan> listOfViewTempatMakan = new ArrayList<listViewTempatMakan>();
     public List<listViewTempatMakan> getDatafromListTempatMakan()
     {
+        listOfViewTempatMakan.remove(item);
         if (true){
-            listViewTempatMakan item = new listViewTempatMakan();
             item.namaTempatMakan = "Nikkou Ramen";
             item.alamatTempatMakan = "AM Sangaji";
             listOfViewTempatMakan.add(item);
