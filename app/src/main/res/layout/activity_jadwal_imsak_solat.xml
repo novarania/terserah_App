@@ -106,10 +106,6 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-<<<<<<< HEAD
-            android:text="2"
-=======
->>>>>>> d3bb754d4a634d12673f85419d20d81b737c8c01
             android:layout_marginLeft="85dp"
             android:id="@+id/textmenit"
             android:layout_gravity="center_vertical"
