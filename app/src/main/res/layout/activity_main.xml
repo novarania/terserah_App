@@ -3,7 +3,8 @@
     android:layout_height="match_parent"
 
     android:background="@drawable/bg_mesjid"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
     <include
         android:id="@+id/tool_bar"
         layout="@layout/tool_bar"
@@ -37,34 +38,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Latitude"
-        android:id="@+id/textView"
-        android:layout_below="@+id/buka_btn"
-        android:layout_alignStart="@+id/buka_btn"
-        android:layout_marginTop="42dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Longitude"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/textView"
-        android:layout_alignStart="@+id/textView"
-        android:layout_marginTop="27dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/latitText"
-        android:layout_above="@+id/textView2"
-        android:layout_toEndOf="@+id/textView2"
         android:layout_marginStart="27dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/longitText"
-        android:layout_alignBottom="@+id/textView2"
         android:layout_alignStart="@+id/latitText" />
 
 </RelativeLayout>
