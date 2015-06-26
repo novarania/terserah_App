@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     GoogleApiClient mGoogleApiClient;
     Location mLastLocation;
     TextView tvLatlong;
+    String lat;
+    String longi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -132,8 +134,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 mGoogleApiClient);
 
         if (mLastLocation != null) {
-            tvLatlong.setText("Latitude: "+ String.valueOf(mLastLocation.getLatitude())+"Longitude: "+
+            tvLatlong.setText("Latitude: "+ String.valueOf(mLastLocation.getLatitude())+"\nLongitude: "+
                     String.valueOf(mLastLocation.getLongitude()));
+            lat = String.valueOf(mLastLocation.getLatitude());
+            longi = String.valueOf(mLastLocation.getLongitude());
         }
     }
 
