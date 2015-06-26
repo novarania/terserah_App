@@ -2,8 +2,7 @@ package com.aceculture.terserahapp;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.location.LocationManager;
-import android.provider.Settings;
+
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -14,9 +13,25 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
+import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
+import com.google.android.gms.location.LocationServices;
+import android.location.Location;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, ConnectionCallbacks, OnConnectionFailedListener {
     Toolbar toolbar;
+
+
+
+    GoogleApiClient mGoogleApiClient;
+    Location mLastLocation;
+    TextView tvLatlong;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,8 +46,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
+        tvLatlong = (TextView) findViewById(R.id.textview1);
+
+        buildGoogleApiClient();
+
+        if(mGoogleApiClient!= null){
+            mGoogleApiClient.connect();
+        }
+        else
+            Toast.makeText(this, "Not connected...", Toast.LENGTH_SHORT).show();
+
+
 
     }
+
+    protected synchronized void buildGoogleApiClient() {
+        mGoogleApiClient = new GoogleApiClient.Builder(this)
+                .addConnectionCallbacks(this)
+                .addOnConnectionFailedListener(this)
+                .addApi(LocationServices.API)
+                .build();
+    }
+
 
     private void setupToolbar() {
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
@@ -83,7 +118,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent j = new Intent(MainActivity.this, tempat_berbuka.class);
                 startActivity(j);
                 break;
+
+
+
+
+                }
+        }
+
+
+    @Override
+    public void onConnected(Bundle bundle) {
+        mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
+                mGoogleApiClient);
+
+        if (mLastLocation != null) {
+            tvLatlong.setText("Latitude: "+ String.valueOf(mLastLocation.getLatitude())+"Longitude: "+
+                    String.valueOf(mLastLocation.getLongitude()));
         }
     }
 
+    @Override
+    public void onConnectionSuspended(int i) {
+        Toast.makeText(this, "Connection suspended...", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onConnectionFailed(ConnectionResult connectionResult) {
+        Toast.makeText(this, "Failed to connect...", Toast.LENGTH_SHORT).show();
+    }
 }

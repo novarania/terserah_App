@@ -7,4 +7,5 @@
     <string name="title_activity_tempat_berbuka">Tempat Berbuka</string>
     <string name="title_activity_detail_tempat_makan">Tentang Tempat Berbuka</string>
     <string name="title_activity_splashscreen">splashscreen</string>
+    <string name="title_activity_get_current_location">GetCurrentLocation</string>
 </resources>

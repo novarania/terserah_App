@@ -189,7 +189,7 @@ public class jadwal_imsak_solat extends AppCompatActivity {
             sisaMenit = sisaImsyak%60;
             text_jam.setText(String.valueOf(sisaJam));
             text_menit.setText(String.valueOf(sisaMenit));
-            sholat.setText("Imsyak");
+            sholat.setText("Imsak");
         }
         else if (sisaSubuh<sisaDhuhur && sisaSubuh>0 && sisaDhuhur>0){
             sisaJam = sisaSubuh/60;
@@ -210,7 +210,7 @@ public class jadwal_imsak_solat extends AppCompatActivity {
             sisaMenit = sisaAshar%60;
             text_jam.setText(String.valueOf(sisaJam));
             text_menit.setText(String.valueOf(sisaMenit));
-            sholat.setText("Ashar");
+            sholat.setText("Asar");
         }
         else if (sisaMaghrib<sisaIsya && sisaMaghrib>0 && sisaIsya>0){
             sisaJam = sisaMaghrib/60;
