@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         final ImageButton jadwal_Btn = (ImageButton) findViewById(R.id.jadwal_btn);
         jadwal_Btn.setOnClickListener((View.OnClickListener) this);
 
-        ImageButton buka_Btn = (ImageButton) findViewById(R.id.buka_btn);
-        buka_Btn.setOnClickListener((View.OnClickListener) this);
+        /*ImageButton buka_Btn = (ImageButton) findViewById(R.id.buka_btn);
+        buka_Btn.setOnClickListener((View.OnClickListener) this);*/
 
 
 
@@ -116,10 +116,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent i = new Intent(MainActivity.this, jadwal_imsak_solat.class);
                 startActivity(i);
                 break;
-            case R.id.buka_btn:
+            /*case R.id.buka_btn:
                 Intent j = new Intent(MainActivity.this, tempat_berbuka.class);
                 startActivity(j);
-                break;
+                break;*/
 
 
 

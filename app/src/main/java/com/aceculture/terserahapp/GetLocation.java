@@ -27,8 +27,8 @@ public class GetLocation extends AppCompatActivity implements LocationListener {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        latitudeField = (TextView) findViewById(R.id.latitText);
-        longitudeField = (TextView) findViewById(R.id.longitText);
+       /* latitudeField = (TextView) findViewById(R.id.latitText);
+        longitudeField = (TextView) findViewById(R.id.longitText);*/
 
         // get location manager
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);

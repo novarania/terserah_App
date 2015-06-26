@@ -16,9 +16,9 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_below="@+id/buka_btn"
-        android:layout_marginTop="25dp"
-        android:text="@string/hello_world" />
+        android:layout_below="@+id/jadwal_btn"
+        android:layout_marginTop="45dp"
+        android:textColor="@color/ColorPrimary" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -26,13 +26,13 @@
         android:id="@+id/jadwal_btn"
         android:src="@drawable/jadwalsolat"
 
-        android:layout_above="@+id/buka_btn"
-        android:layout_marginTop="40dp"
+
+        android:layout_marginTop="150dp"
         android:background="@null"
         android:layout_centerHorizontal="true"
         android:clickable="false" />
 
-    <ImageButton
+    <!--<ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/buka_btn"
@@ -41,9 +41,9 @@
         android:layout_marginTop="20dp"
         android:background="@null"
         android:layout_alignLeft="@+id/jadwal_btn"
-        android:layout_alignStart="@+id/jadwal_btn" />
+        android:layout_alignStart="@+id/jadwal_btn" />-->
 
-    <TextView
+    <!--<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/latitText"
@@ -53,6 +53,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/longitText"
-        android:layout_alignStart="@+id/latitText" />
+        android:layout_alignStart="@+id/latitText" />-->
 
 </RelativeLayout>
